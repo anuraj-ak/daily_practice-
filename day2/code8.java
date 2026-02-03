@@ -1,0 +1,35 @@
+/* Problem : 
+                Basic encapsulation get private name and age use 
+                setter and getter method for them and print detailed 
+        */
+
+class Person {
+        private String name;
+        // public String getName() {
+        //         return name;
+        // }
+        public void setName(String name) {
+                this.name = name;
+        }
+        private int age ;
+        // public int getAge() {
+        //         return age;
+        // }
+         void setAge(int age) {
+                this.age = age;
+        }
+
+        void display(){
+                System.out.println("Name : "+name);
+                System.out.println("Age : "+age);
+        }
+
+        public static void main(String[] args) {
+                Person p = new Person();
+                p.setName("Anuraj");
+                p.setAge(21);
+
+                p.display();
+        }
+}
+
