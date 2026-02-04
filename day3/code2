@@ -1,0 +1,15 @@
+class Inheritance {
+    int x = 10;
+    int y = 20;
+     {
+        System.out.println("Normal class ");
+    }
+    
+} 
+class Child extends Inheritance{
+    public static void main(String[] args) {
+        Inheritance obj = new Child();
+        System.out.println(obj.x);
+        System.out.println(obj.y);
+    }
+}
