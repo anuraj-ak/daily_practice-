@@ -1,0 +1,62 @@
+// hierarchy level inheritance
+class execution{   
+
+        public static void main(String[] args) {
+            dog d=new dog();
+            d.dogg();
+            d.sound1();
+            d.eat();
+            d.run();
+
+            monkey m=new monkey();
+            m.eat();
+            m.single();         /// multi level
+            m.multi();
+            m.run();
+        }
+    }
+class animal{
+
+
+
+    void sound1(){
+        System.out.println("bhoo"+"bhoo");
+    }
+    void sound2(){
+        System.out.println("meoo");
+    }
+    void eat(){
+        System.out.println("eatting");
+    }
+    void run(){
+        System.out.println("running");
+    }
+
+} 
+    
+    class dog extends animal{           //hirarchy
+
+        void dogg(){
+            System.out.println("dog info");
+        }
+
+    }
+
+    class cat extends animal{           // hirarchy
+        void catt(){
+            System.out.println("cat info");
+        }
+    }
+
+    class mammles extends animal{
+        void single(){
+            System.out.println("single inheritance");
+        }
+    }
+
+    class monkey extends mammles{
+        void multi(){
+            System.out.println("multilevel inheritance");
+        }
+    }
+
