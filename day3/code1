@@ -1,0 +1,80 @@
+public class code11 {                       // here we only insert data into s1 object of that 
+                                            /// constructor and changes reflect in copy const also
+    public static void main(String[] args) {
+        students s1=new students();
+        s1.name="anuraj";
+        s1.age=21;
+        s1.marks[0]=56;  // we assign value before copy
+        s1.marks[1]=65;
+        s1.marks[2]=85;
+        System.out.println(s1.name+""+s1.age);
+        students s2=new students(s1);               // after copy constructor
+        s1.marks[0]=44;
+        System.out.println(s2.name+" "+s2.age+" "+s2.pass);
+        for(int i=0;i<3;i++){
+            System.out.println(s2.marks[i]);
+        }
+        for(int i=0;i<3;i++){
+            System.out.println(s1.marks[i]);
+        }
+    }
+}
+class students{
+    int age;
+    String name;
+    String pass;
+    int marks[]=new int[3];
+
+    students(String name,int age,int marks[]){
+        this.name=name;
+        this.age=age;
+        this.marks=marks;
+        
+    }
+    
+
+    students(students obj){      // copy const //need to pass obj
+        this.name=obj.name;         // shallow constructor 
+        this.age=obj.age;
+        this.marks=obj.marks;
+    }
+
+     students() {
+    }
+    
+    
+ }
+/////////
+
+class Student {
+    int age;
+    String name;
+
+    // Normal constructor
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Copy constructor
+    Student(Student s) {
+        this.name = s.name;
+        this.age = s.age;
+    }
+
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
+
+ class code11 {
+    public static void main(String[] args) {
+        Student s1 = new Student("Anuraj", 21);
+        Student s2 = new Student(s1);   // copy constructor
+
+        s1.name = "Changed";            // change original
+
+        s1.display();
+        s2.display();
+    }
+}
