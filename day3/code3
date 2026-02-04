@@ -1,0 +1,43 @@
+class execution{   
+
+        public static void main(String[] args) {
+            dog d=new dog();
+            d.dogg();
+            d.sound1();
+            d.eat();
+            d.run();
+        }
+    }
+class animal{
+
+
+
+    void sound1(){
+        System.out.println("bhoo"+"bhoo");
+    }
+    void sound2(){
+        System.out.println("meoo");
+    }
+    void eat(){
+        System.out.println("eatting");
+    }
+    void run(){
+        System.out.println("running");
+    }
+
+} 
+    
+    class dog extends animal{
+
+        void dogg(){
+            System.out.println("dog info");
+        }
+
+    }
+
+    class cat extends animal{
+        void catt(){
+            System.out.println("cat info");
+        }
+    }
+
