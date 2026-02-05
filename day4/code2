@@ -1,0 +1,26 @@
+ //method overriding
+ 
+ public class code14 {
+    public static void main(String[] args) {
+        child bc=new child();                   //we can call method by creating object 
+        bc.pr();                                    //individually
+
+        parent pp=new parent();
+        pp.pr();
+    }
+}
+
+class parent{
+    void pr(){
+        System.out.println("parent mathod");
+    }
+
+}
+class child extends parent{
+   @Override
+
+    void pr(){
+        System.out.println("child method");
+    }
+
+}
