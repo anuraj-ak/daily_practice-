@@ -1,0 +1,30 @@
+// method overloding
+
+public class code13 {
+    public static void main(String[] args) {
+        calculate cc=new calculate();
+        System.out.println(cc.sum(5,5));
+       System.out.println(cc.sum(10, 10)); 
+
+        cc.sum((float)5.5,(float)4.5);   // for float we need do type casting 
+                                            //because java treat it value as double
+
+          cc.sum(5,5,5);     
+          
+          
+    }  
+
+}
+
+class calculate{
+
+    int sum(int a,int b){
+        return a+b;
+    }
+    float sum(float a,float b){
+        return a+b;
+    }
+    int sum(int a,int b,int c){
+        return a+b+c;
+    }
+}
