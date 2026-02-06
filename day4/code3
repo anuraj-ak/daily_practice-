@@ -1,0 +1,33 @@
+
+
+abstract class code15 {         // we cannnot create object of code15
+    
+    void eat(){
+        System.out.println("eating");
+    }
+    abstract void walk();       // this method is compulsory to use by other class
+}                                   //its like idea abstract class give to another classes
+
+class parent1 extends code15{    //The type animal1 must implement the inherited abstract method code15.walk()
+
+    void walk(){
+        System.out.println("walking parent");
+    }
+}
+class child1 extends parent1{
+    void walk(){
+        System.out.println("walking");
+    }
+}
+
+class ex0{
+    public static void main(String[] args) {
+        child1 cc=new child1();
+        cc.eat();
+        cc.walk();
+
+        parent1 pp=new parent1();
+        //pp.eat();
+        pp.walk();
+    }
+}
