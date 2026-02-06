@@ -1,0 +1,28 @@
+
+public class code18{
+    public static void main(String[] args) {
+        Rook rk=new Rook();
+        rk.moves();
+    }
+}
+
+// interface
+interface ChessPlayer {
+    void moves();
+}
+
+// Queen class
+class Queen implements ChessPlayer {
+
+    public void moves() {
+        System.out.println("up, down, left, right, diagonal");
+    }
+}
+
+// Rook class
+class Rook implements ChessPlayer {
+
+    public void moves() {
+        System.out.println("up, down, left, right");
+    }
+}
