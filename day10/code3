@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+class run{
+
+public static void swap(ArrayList<Integer> list1,int index1,int index2){
+        int temp=list1.get(index1);
+        list1.set(index1, list1.get(index2));
+        list1.set(index2, temp);
+}
+}
+ public class code22 {
+    public static void main(String[] args) {
+        ArrayList<Integer> list1=new ArrayList<>();
+        list1.add(8);
+        list1.add(5);
+        list1.add(9);
+        list1.add(4);
+        list1.add(7);
+
+        System.out.println(list1);
+        int index1=2;
+        int index2=3;
+        
+        run.swap(list1, index1, index2);
+                System.out.println(list1);
+
+    }
+}
